@@ -1,1 +1,9 @@
-<p>navbar works!</p>
+<nav>
+    <a routerLink=""><h1>{{icon}}GuessTheChar</h1></a>
+    <div class="iconLinks">
+        <button routerLink="/past-games"><img src = "../../../assets/past-games.svg" alt="past games"/></button>
+        <button (click)="showStats()"><img src = "../../../assets/stats.svg" alt="stats"/></button>
+        <button (click)="showHelp()"><img src = "../../../assets/help.svg" alt="help"/></button>
+    </div>
+    
+</nav>

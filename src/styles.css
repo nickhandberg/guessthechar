@@ -1,1 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --blue: #0f1729;
+    --white: #e3eceb;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: var(--blue);
+}
