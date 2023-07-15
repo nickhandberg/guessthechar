@@ -3,7 +3,12 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
     --blue: #0f1729;
-    --white: #e3eceb;
+    --blue2: #17233e;
+    --blue3: #213158;
+    --red: #5e1a1f;
+    --red2: #772127;
+    --white: #aaadad;
+    --white2: #e3eceb;
 }
 
 body{

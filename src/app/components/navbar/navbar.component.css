@@ -8,7 +8,7 @@ nav{
 }
 
 a{
-    color: var(--white);
+    color: var(--white2);
     text-decoration: none;
 }
 
@@ -31,4 +31,10 @@ img:hover {
     display: flex;
     justify-content: space-evenly;
     width: 150px;
+}
+
+@media only screen and (max-width: 450px) {
+    h1{
+        font-size: 2.2ch;
+    }
 }
