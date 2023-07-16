@@ -19,7 +19,8 @@ export class GalleryComponent {
     constructor(private userService: UserService) {}
 
     ngOnChanges(changes: SimpleChanges){
-        this.imageIndex = this.userService.getUserData(this.gameProgress!.id)?.guesses;
+        // error check this
+        this.imageIndex = Math.min(5,this.userService.getUserData(this.gameProgress!.id)!.guesses);
     }
 
     changeImage(index: number): void{
