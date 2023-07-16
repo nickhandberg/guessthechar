@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { CookieService } from 'ngx-cookie-service';
 import { GameProgress } from '../interfaces/game-progress';
 import { User } from '../interfaces/user';
 
@@ -9,23 +8,23 @@ import { User } from '../interfaces/user';
 export class UserService {
     userData: User | undefined
 
-    constructor(private cookieService: CookieService) { }
+    constructor() { }
 
     setUserData(progress: GameProgress): void {
         if(this.userData != undefined){
             this.userData!.gameProgress[progress.id] = progress;
-            this.cookieService.set('gtcUser', JSON.stringify(this.userData));
+            localStorage.setItem('gtcUser', JSON.stringify(this.userData));
         }
     }
 
     getUserData(index: number): GameProgress | undefined {
-        const cookie = this.cookieService.get('gtcUser');
-        if(!cookie){
+        const data = localStorage.getItem('gtcUser');
+        if(!data){
             this.userData = {gameProgress: []};
-            this.cookieService.set('gtcUser', JSON.stringify(this.userData));
+            localStorage.setItem('gtcUser', JSON.stringify(this.userData));
         }
         else{
-            this.userData = JSON.parse(cookie);
+            this.userData = JSON.parse(data);
         }
         if(this.userData != undefined && this.userData?.gameProgress[index] == undefined){
             let gameProgress: GameProgress = {id: index, guesses: 0, correct: false, history: []}

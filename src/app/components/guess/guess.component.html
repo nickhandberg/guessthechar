@@ -1,6 +1,6 @@
 <div class="guess">
     <div [class.winNotif] = "gameProgress?.correct" [class.lossNotif] = "!gameProgress?.correct" *ngIf="gameProgress?.correct || gameProgress!.guesses > 5">
-        <h2>{{gameProgress?.correct ? "You Guessed It" : "Out of guesses"}}</h2>
+        <h2>{{gameProgress?.correct ? "You Guessed It!" : "Out of guesses"}}</h2>
         <p>The character is: <span class="charName">{{currentChar?.name}}</span></p>
         <p class="gameName">from {{currentChar?.game}}</p>
     </div>
