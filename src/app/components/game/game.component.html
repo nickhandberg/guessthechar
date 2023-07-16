@@ -1,8 +1,4 @@
 <main>
-    
-
-    
-
     <div class="navButtons">
         <span class="navBut"><button *ngIf="currentChar?.id !== 0" (click)="navBack()">
             <img src = "../../../assets/chev-left.svg" alt="help"/>
@@ -14,9 +10,7 @@
     </div>
     <app-gallery [currentChar]="currentChar"></app-gallery>
     
-
-
-
+    
     <p>Answer: {{currentChar?.name}}</p>
 </main>
 

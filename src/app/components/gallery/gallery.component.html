@@ -13,10 +13,11 @@
     </button>
     <button 
         id="skipButton" 
-        [class.disabled]="gameProgress!.guesses == 6" 
-        [disabled]="gameProgress!.guesses == 6" 
+        [class.disabled]="gameProgress!.guesses == 6 || gameProgress!.correct" 
+        [disabled]="gameProgress!.guesses == 6 || gameProgress!.correct" 
         (click)="skip()">
             <img src = "../../../assets/skip.svg" alt="help"/>Skip
     </button>
 </div>
+<app-guess [currentChar]="currentChar" [gameProgress]="gameProgress" (sendGameProgress)="updateGameProgress($event)"></app-guess>
 

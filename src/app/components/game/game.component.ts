@@ -3,12 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { Char } from 'src/app/interfaces/char';
 import { CharService } from 'src/app/services/char.service';
 import { GalleryComponent } from '../gallery/gallery.component';
+import { GuessComponent } from '../guess/guess.component';
 
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, GalleryComponent],
+  imports: [CommonModule, GalleryComponent, GuessComponent],
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.css']
 })
