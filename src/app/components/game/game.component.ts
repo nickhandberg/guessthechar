@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Char } from 'src/app/interfaces/char';
-import { GameProgress } from 'src/app/interfaces/game-progress';
 import { CharService } from 'src/app/services/char.service';
-import { UserService } from 'src/app/services/user.service';
 import { GalleryComponent } from '../gallery/gallery.component';
 
 
@@ -19,7 +17,7 @@ export class GameComponent implements OnInit{
     index: number = 0;
     currentChar: Char | undefined;
 
-    constructor(private charService: CharService, private userService: UserService) {}
+    constructor(private charService: CharService) {}
 
     ngOnInit(): void {
         this.getChars();

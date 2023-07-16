@@ -23,14 +23,14 @@ export class GalleryComponent{
     }
 
     changeImage(index: number): void{
-        if(this.currentChar?.imageLinks[index-1] != undefined){
-            this.imageIndex = index-1;
+        if(this.currentChar?.imageLinks[index] != undefined){
+            this.imageIndex = index;
         }
     }
 
     setImageIndex(): void {
-        this.gameProgress = this.userService.getUserData(this.currentChar!.id);
-        this.imageIndex = Math.min(5,this.gameProgress!.guesses);
+        this.gameProgress = this.currentChar ? this.userService.getUserData(this.currentChar.id) : undefined;
+        this.imageIndex = this.gameProgress ? Math.min(5, this.gameProgress.guesses) : 0;
     }
 
     skip(): void{
