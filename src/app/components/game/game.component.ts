@@ -17,15 +17,12 @@ import { GalleryComponent } from '../gallery/gallery.component';
 export class GameComponent implements OnInit{
     chars: Char[] = [];
     index: number = 0;
-    imageIndex: number | undefined;
     currentChar: Char | undefined;
-    gameProgress: GameProgress | undefined;
 
     constructor(private charService: CharService, private userService: UserService) {}
 
     ngOnInit(): void {
         this.getChars();
-        this.setImageIndex();
     }
 
     getChars(): void {
@@ -35,27 +32,10 @@ export class GameComponent implements OnInit{
     }
 
     navForward(): void {
-        this.imageIndex  = 10;
-        this.index += 1;
-        this.currentChar = this.chars[this.index];
-        this.setImageIndex();
+        this.currentChar = this.chars[this.index += 1];
     }
 
     navBack(): void {
-        this.imageIndex  = 10;
-        this.index -= 1;
-        this.currentChar = this.chars[this.index];
-        this.setImageIndex();
-    }
-
-    setImageIndex(): void {
-        console.log(this.imageIndex);
-        this.getGameProgress();
-        this.imageIndex = Math.min(5,this.gameProgress!.guesses);
-        console.log(this.imageIndex);
-    }
-
-    getGameProgress(): void {
-        this.gameProgress = this.userService.getUserData(this.index);
+        this.currentChar = this.chars[this.index -= 1];
     }
 }
