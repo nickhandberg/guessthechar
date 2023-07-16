@@ -4,27 +4,16 @@
     
 
     <div class="navButtons">
-        <span class="navBut"><button *ngIf="currentChar?.id !== chars[0].id" (click)="navBack()">
+        <span class="navBut"><button *ngIf="currentChar?.id !== 0" (click)="navBack()">
             <img src = "../../../assets/chev-left.svg" alt="help"/>
         </button></span>
-        <p>Game #{{currentChar?.id}}</p>
+        <p>Game #{{currentChar?.id! + 1}}</p>
         <span class="navBut"><button *ngIf="currentChar?.id !== chars[chars.length-1].id" (click)="navForward()">
             <img src = "../../../assets/chev-right.svg" alt="help"/>
         </button></span>
     </div>
-    <!--Break off into seperate component-->
-    <div *ngIf="currentChar?.imageLinks"  class="imageBox">
-        <img  src="{{currentChar!.imageLinks[0]}}"/>
-    </div>
-    <div class="imageButtons">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-        <button class="disabled">6</button>
-        <button id="skipButton"><img src = "../../../assets/skip.svg" alt="help"/>Skip</button>
-    </div>
+    <app-gallery [currentChar]="currentChar" [gameProgress]="gameProgress" [imageIndex]="imageIndex"></app-gallery>
+    
 
 
 

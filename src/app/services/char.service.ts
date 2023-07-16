@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Char } from 'src/app/char';
+import { Char } from 'src/app/interfaces/char';
 import { CHARS } from 'src/app/mock-data';
 
 @Injectable({

@@ -1,0 +1,77 @@
+img{
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.imageBox{
+    position: relative;
+    display: flex;
+    max-width: 600px;
+    padding-top: 1ch;
+    padding-bottom: 1ch;
+}
+
+.imageButtons{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    max-width: 400px;
+    justify-content: space-evenly;
+}
+
+.imageButtons button{
+    font-size: 2ch;
+    font-weight: bold;
+    color: var(--white);
+    padding: 1ch;
+    border-radius: 5px;
+}
+
+.imageButtons button:not(.disabled):hover{
+    color: var(--white2);
+}
+
+.imageButtons .selected{
+    color: var(--white2);
+    background-color: var(--green);
+    cursor: default;
+}
+
+.disabled{
+    cursor: not-allowed;
+    opacity: 0.35;
+}
+
+.disabled:hover{
+    background-color: var(--blue2);
+}
+
+#skipButton {
+    display: flex;
+    align-items: center;
+    background-color: var(--red);
+    padding-right: 2ch;
+}
+
+#skipButton:not(.disabled):hover {
+    background-color: var(--red2);
+}
+
+.hint{
+    position: absolute;
+    top: 1;
+    left: 0px;
+    margin-top: 0;
+    padding: 0.5ch 1ch;
+    border-radius: 8px 0px 0px 0px;
+    backdrop-filter: contrast(5%);
+}
+
+
+
+
+
+
+
+
+

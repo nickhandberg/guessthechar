@@ -5,48 +5,6 @@ main{
     text-align: center;
 }
 
-p{
-    color: var(--white2);
-}
-
-img{
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.imageBox{
-    display: flex;
-    max-width: 600px;
-    padding-top: 1ch;
-    padding-bottom: 1ch;
-}
-
-button {
-    border: none;
-    background-color: var(--blue2);
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--blue3);
-}
-
-button:hover img{
-    filter: contrast(2);
-}
-
-.disabled{
-    cursor: not-allowed;
-    opacity: 0.65;
-}
-
-.disabled:hover{
-    opacity: 0.65;
-    color: var(--white);
-    background-color: var(--blue2);
-}
-
 .navButtons{
     display: flex;
     justify-content: space-between;
@@ -57,35 +15,8 @@ button:hover img{
     width: 50px;
 }
 
-.imageButtons{
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    max-width: 400px;
-    justify-content: space-evenly;
-}
-
-.imageButtons button{
-    font-size: 2ch;
-    font-weight: bold;
-    color: var(--white);
-    padding: 1ch;
-    border-radius: 5px;
-}
-
-.imageButtons button:hover{
-    color: var(--white2);
-}
-
-#skipButton {
-    display: flex;
-    align-items: center;
-    background-color: var(--red);
-    padding-right: 2ch;
-}
-
-#skipButton:hover {
-    background-color: var(--red2);
+.navBut button{
+    padding-top: 0.5ch;
 }
 
 

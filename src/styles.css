@@ -3,15 +3,37 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
     --blue: #0f1729;
-    --blue2: #17233e;
-    --blue3: #213158;
-    --red: #5e1a1f;
-    --red2: #772127;
-    --white: #aaadad;
+    --blue2: #1d2c4f;
+    --blue3: #263968;
+    --green: #1f5654;
+    --green2: #256967;
+    --red: #a12a32;
+    --red2: #ac2e37;
+    --white: #d5d6d6;
     --white2: #e3eceb;
+    --white3: #ffffff;
 }
 
 body{
     font-family: "Poppins", sans-serif;
     background-color: var(--blue);
+}
+
+button {
+    border: none;
+    background-color: var(--blue2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--blue3);
+}
+
+button:not(.disabled):hover img{
+    filter: contrast(2);
+}
+
+p{
+    color: var(--white2);
 }
