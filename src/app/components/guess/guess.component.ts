@@ -15,12 +15,13 @@ export class GuessComponent {
     @Input() currentChar: Char | undefined;
     @Input() gameProgress: GameProgress | undefined;
     @Output() sendGameProgress = new EventEmitter<GameProgress>();
-    userInput: string | undefined;
+    userInput: string = "";
 
     constructor(private userService: UserService) {}
 
     ngOnChanges(changes: SimpleChanges){
         this.setChar();
+        this.userInput="";
     }
 
     setChar(): void {
@@ -42,6 +43,7 @@ export class GuessComponent {
             this.gameProgress.history.push(this.userInput);
             this.userService.setUserData(this.gameProgress);
             this.sendGameProgress.emit(this.gameProgress);
+            this.userInput = "";
         }
     }
 }

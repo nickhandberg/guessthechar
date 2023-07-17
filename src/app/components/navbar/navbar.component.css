@@ -1,4 +1,6 @@
 nav{
+    margin-top: 2ch;
+    margin-bottom: 2ch;
     display: flex;
     max-width: 600px;
     margin-left: auto;
@@ -19,6 +21,9 @@ button{
 }
 
 h1{
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 3ch;
     font-weight: bold;
 }

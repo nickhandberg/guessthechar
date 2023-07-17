@@ -1,18 +1,21 @@
-<div class="guess">
-    <div [class.winNotif] = "gameProgress?.correct" [class.lossNotif] = "!gameProgress?.correct" *ngIf="gameProgress?.correct || gameProgress!.guesses > 5">
-        <h2>{{gameProgress?.correct ? "You Guessed It!" : "Out of guesses"}}</h2>
-        <p>The character is: <span class="charName">{{currentChar?.name}}</span></p>
+<div *ngIf="gameProgress" class="guess">
+    <p *ngIf="!gameProgress?.correct && gameProgress!.guesses <= 5" class="tryNotif">
+        {{"You have "+(6-gameProgress!.guesses)+(gameProgress.guesses == 5 ? " try " : " tries ")+"left"}}
+    </p>
+    <div [class.winNotif] = "gameProgress.correct" [class.lossNotif] = "!gameProgress.correct" *ngIf="gameProgress?.correct || gameProgress!.guesses > 5">
+        <h2>{{gameProgress.correct ? "You Guessed It!" : "Out of tries"}}</h2>
+        <p>The character is: <br><span class="charName">{{currentChar?.name}}</span></p>
         <p class="gameName">from {{currentChar?.game}}</p>
     </div>
     <form *ngIf="!gameProgress?.correct && gameProgress!.guesses <= 5" autocomplete="off" (submit)="submitGuess(); $event.preventDefault()">
         <div class="autocomplete">
-            <input id="guessInput" type="text" (keyup)="onKey($event)" autocomplete="off" name="guessInput" placeholder="Search for a Character...">
+            <input id="guessInput" type="text" (keyup)="onKey($event)" [value]="userInput" autocomplete="off" name="guessInput" placeholder="Search for a Character...">
         </div>
         <button id="submitBtn" type="submit" (click)="submitGuess(); $event.preventDefault()">Submit</button>
     </form>
-    <div *ngIf="gameProgress" class="guessList">
+    <div *ngIf="currentChar" class="guessList">
         <ul>
-            <li class="guessItem" [class.wrongAnswer] = "item != currentChar!.name" *ngFor="let item of gameProgress.history">{{item}}</li>
+            <li class="guessItem" [class.wrongAnswer] = "item != currentChar.name" *ngFor="let item of gameProgress.history">{{(item == currentChar.name ? "✔️":"❌")+item}}</li>
         </ul>
     </div>
     
