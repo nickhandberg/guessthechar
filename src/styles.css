@@ -2,19 +2,17 @@
 
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --blue: #0f1729;
-    --blue2: #1d2c4f;
-    --blue3: #263968;
-    --green: #1f5654;
-    --green2: #256967;
-    --green3: #145638;
-    --green4: #1a7049;
-    --green5: #29b878;
-    --red: #a12a32;
-    --red2: #ac2e37;
-    --white: #d5d6d6;
-    --white2: #e3eceb;
-    --white3: #ffffff;
+    --blue: #141328;
+    --green: #058C42;
+    --green2: #06A34D;
+    --green3: #16DB65;
+    --red: #D42240;
+    --red2: #DD2D4A;
+    --purple: #4A4769;
+    --purple2: #7564C0;
+    --purple3: #5F4BB6;
+    --white: #edf2f1;
+    --white2: #ffffff;
     --grey: #aaadad;
 }
 
@@ -25,13 +23,13 @@ body{
 
 button {
     border: none;
-    background-color: var(--blue2);
+    background-color: var(--purple);
     border-radius: 10px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: var(--blue3);
+    background-color: var(--purple2);
 }
 
 button:not(.disabled):hover img{

@@ -2,12 +2,14 @@
     <p *ngIf="imageIndex! >= 1" class="hint">Hint: {{currentChar.hints[imageIndex!-1]}}</p>
     <img  src="{{currentChar.imageLinks[imageIndex != undefined ? imageIndex : 0]}}"/>
 </div>
-<div  class="imageButtons">
+<div *ngIf="gameProgress"  class="imageButtons">
     <button 
         (click)="changeImage(number-1)" 
         *ngFor="let number of [1, 2, 3, 4, 5, 6]" 
-        [disabled]="gameProgress!.guesses+1 < number" 
-        [class.disabled] = "gameProgress!.guesses+1 < number"
+        [disabled]="gameProgress!.guesses+1 < number && (!gameProgress.correct && gameProgress.guesses < 6)"
+        [class.wrong] = "(gameProgress.correct || gameProgress.guesses >= 6) && number <= gameProgress.guesses" 
+        [class.correct] = "gameProgress.correct && number == gameProgress.guesses" 
+        [class.disabled] = "(gameProgress!.guesses+1 < number) && (!gameProgress.correct && gameProgress.guesses < 6) "
         [class.selected] = "imageIndex! + 1 == number">
             {{number}}
     </button>

@@ -1,5 +1,5 @@
 .winNotif h2{
-    color: var(--green5);
+    color: var(--green3);
 }
 
 .lossNotif h2{
@@ -22,7 +22,7 @@ p{
 
 .charName {
     font-size: 2.5ch;
-    color: var(--green5);
+    color: var(--green3);
     font-weight: 700;
     
 }
@@ -44,9 +44,9 @@ p{
 }
 
 #submitBtn{
-    color: var(--white);
-    font-weight: 500;
-    background-color: var(--green3);
+    color: var(--white2);
+    font-weight: 600;
+    background-color: var(--green);
     font-size: 2ch;
     padding: 0.75ch;
     margin-top: 1ch;
@@ -55,7 +55,7 @@ p{
 }
 
 #submitBtn:hover{
-    background-color: var(--green4);
+    background-color: var(--green2);
 }
 
 ul{
@@ -68,7 +68,7 @@ ul{
     width: 100%;
     padding: 0.5ch;
     margin-bottom: 1ch;
-    border: 3px var(--green5) solid;
+    border: 3px var(--green3) solid;
     border-radius: 8px;
     list-style-type: none;
     color:var(--white);
