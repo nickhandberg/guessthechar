@@ -18,6 +18,19 @@ export class UserService {
     }
 
     getUserData(index: number): GameProgress | undefined {
+        this.getDataFromStorage();
+        if(this.userData?.gameProgress[index] == undefined){
+            this.setUserData({id: index, guesses: 0, correct: false, history: []});
+        }
+        return this.userData?.gameProgress[index];
+    }
+
+    getAllUserData(): User | undefined {
+        this.getDataFromStorage();
+        return this.userData;
+    }
+
+    getDataFromStorage(){
         const data = localStorage.getItem('gtcUser');
         if(!data){
             this.userData = {gameProgress: []};
@@ -26,11 +39,5 @@ export class UserService {
         else{
             this.userData = JSON.parse(data);
         }
-        if(this.userData != undefined && this.userData?.gameProgress[index] == undefined){
-            let gameProgress: GameProgress = {id: index, guesses: 0, correct: false, history: []}
-            this.setUserData(gameProgress);
-            this.userData!.gameProgress[index] = gameProgress;
-        }
-        return this.userData!.gameProgress[index];
     }
 }
