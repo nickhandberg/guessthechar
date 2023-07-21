@@ -1,23 +1,28 @@
-<a routerLink="">
-    <div  class="listItem" [class.win]="gameProgress?.correct"  [class.loss]="gameProgress && !gameProgress.correct && gameProgress.guesses >= 6">
-        <h2>Game #{{index!+1}}</h2>
-        <div class="boxList">
-            <div *ngFor="let num of [].constructor(6); let i = index" class="box" [ngStyle]="{
-                'background-color': (!gameProgress) ? 'var(--blue)' : 
-                (gameProgress.correct && gameProgress.guesses-1 == i) ? 'var(--green)' : 
-                (i < (gameProgress.guesses) || (!gameProgress.correct && gameProgress.guesses >= 6)) ? 'var(--red)' :
-                'var(--blue)'}">
-                <p class="indicators" *ngIf="gameProgress?.guesses == 0">?</p>
-            </div>    
-        </div>
-        <p *ngIf="gameProgress">
-        {{  
-            gameProgress.correct == true ? "Win" : 
-            gameProgress.guesses < 6 ? 
-            gameProgress.guesses > 0 ? "Ongoing" : 
-            "Not Played" : "Loss"
-        }}
-        </p>
-        <p *ngIf="!gameProgress">{{  "Not Played" }}</p>
-        </div>
-</a>
+
+<div (click)="setIndex()" class="listItem" [class.win]="gameProgress?.correct"  [class.loss]="gameProgress && !gameProgress.correct && gameProgress.guesses >= 6">
+    <h2>Game #{{index!+1}}</h2>
+    <div class="boxList">
+        <div *ngFor="let num of [].constructor(6); let i = index" class="box" [ngStyle]="{
+            'background-color': (!gameProgress) ? 'var(--blue)' : 
+            (gameProgress.correct && gameProgress.guesses-1 == i) ? 'var(--green)' : 
+            (i < (gameProgress.guesses) || (!gameProgress.correct && gameProgress.guesses >= 6)) ? 'var(--red)' :
+            'var(--blue)'}">
+            <p 
+                class="indicators" 
+                *ngIf="gameProgress?.guesses == 0 || 
+                !gameProgress || 
+                (i > gameProgress.guesses-1 && !gameProgress.correct)"
+            >?</p>
+        </div>    
+    </div>
+    <p *ngIf="gameProgress">
+    {{  
+        gameProgress.correct == true ? "Win" : 
+        gameProgress.guesses < 6 ? 
+        gameProgress.guesses > 0 ? "Ongoing" : 
+        "Not Played" : "Loss"
+    }}
+    </p>
+    <p *ngIf="!gameProgress">{{  "Not Played" }}</p>
+</div>
+

@@ -1,17 +1,17 @@
 <main>
     <div class="navButtons">
-        <span class="navBut"><button *ngIf="currentChar?.id !== 0" (click)="navBack()">
+        <span class="navBut"><button *ngIf="char?.id !== 0" (click)="navBack()">
             <img src = "../../../assets/chev-left.svg" alt="help"/>
         </button></span>
-        <p>Game #{{currentChar?.id! + 1}}</p>
-        <span class="navBut"><button *ngIf="currentChar?.id !== chars[chars.length-1].id" (click)="navForward()">
+        <p>Game #{{char?.id! + 1}}</p>
+        <span class="navBut"><button *ngIf="char?.id !== size - 1" (click)="navForward()">
             <img src = "../../../assets/chev-right.svg" alt="help"/>
         </button></span>
     </div>
-    <app-gallery [currentChar]="currentChar"></app-gallery>
+    <app-gallery [currentChar]="char"></app-gallery>
     
     
-    <p>Answer: {{currentChar?.name}}</p>
+    <p>Answer: {{char?.name}}</p>
 </main>
 
 

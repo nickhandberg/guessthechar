@@ -1,4 +1,5 @@
 .listItem{
+    cursor: pointer;
     margin: 1ch;
     padding: 0ch 1ch;
     border: 3px solid var(--white);

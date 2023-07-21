@@ -6,16 +6,11 @@ import { CHARS } from 'src/app/mock-data';
 @Injectable({
     providedIn: 'root'
 })
-export class CharService {
-    size: number = 0;
+export class CharService{
+    size: number | undefined;
+    currIndex: number = CHARS.length-1;
 
     constructor() { }
-
-    getChars(): Observable<Char[]> {
-        const characters = of(CHARS);
-        this.size = CHARS.length;
-        return characters;
-    }
 
     getChar(id: number): Observable<Char> {
         const character = CHARS.find(c => c.id === id)!;
@@ -25,5 +20,13 @@ export class CharService {
     getSize(): Observable<number> {
         this.size = CHARS.length;
         return of(this.size);
+    }
+
+    setCurrIndex(i: number){
+        this.currIndex = i;
+    }
+
+    getCurrIndex(): number | undefined{
+        return this.currIndex;
     }
 }

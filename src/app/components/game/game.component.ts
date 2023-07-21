@@ -14,9 +14,9 @@ import { GuessComponent } from '../guess/guess.component';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit{
-    chars: Char[] = [];
+    char: Char | undefined;
+    size: number = 0;
     index: number = 0;
-    currentChar: Char | undefined;
 
     constructor(private charService: CharService) {}
 
@@ -25,16 +25,18 @@ export class GameComponent implements OnInit{
     }
 
     getChars(): void {
-        this.charService.getChars().subscribe(chars => this.chars = chars);
-        this.index = this.chars.length-1;
-        this.currentChar = this.chars[this.index];
+        this.charService.getSize().subscribe(size => this.size = size);
+        this.index = this.charService.currIndex;
+        this.charService.getChar(this.index).subscribe(char => this.char = char);
     }
 
     navForward(): void {
-        this.currentChar = this.chars[this.index += 1];
+        this.charService.setCurrIndex(this.index += 1);
+        this.charService.getChar(this.index).subscribe(char => this.char = char);
     }
 
     navBack(): void {
-        this.currentChar = this.chars[this.index -= 1];
+        this.charService.setCurrIndex(this.index -= 1);
+        this.charService.getChar(this.index).subscribe(char => this.char = char);
     }
 }
