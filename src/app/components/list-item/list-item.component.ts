@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { GameProgress } from 'src/app/interfaces/game-progress';
 
 @Component({
   selector: 'app-list-item',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './list-item.component.html',
   styleUrls: ['./list-item.component.css']
 })

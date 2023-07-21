@@ -8,10 +8,23 @@
     align-items: center;
 }
 
+.listItem:hover{
+    background-color: var(--purple);
+}
+
 h2{
     color: var(--white);
     margin: 0;
-    font-size: 2ch;
+    font-size: 1.5ch;
+}
+
+p{
+    text-align: right;
+    width: 9ch;
+}
+
+a{
+    text-decoration: none;
 }
 
 
@@ -24,11 +37,13 @@ h2{
 }
 
 .boxList{
+    align-items: start;
     display: flex;
     gap: 1ch;
 }
 
 .box{
+    position: relative;
     background-color: var(--grey);
     border: 1px solid var(--white);
     width: 2ch;
@@ -37,4 +52,28 @@ h2{
 
 .box .win{
     background-color: var(--green);
+}
+
+.indicators{
+    position: absolute;
+    top: -90%;
+    left: -375%;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 450px) {
+    h2{
+        font-size: 1.5ch;
+    }
+    .box{
+        width: 1.5ch;
+        height: 1.5ch;
+    }
+    .boxList{
+
+        gap: 0.5ch;
+    }
+    p{
+        font-size: 1.2ch;
+    }
 }
