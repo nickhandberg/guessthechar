@@ -4,16 +4,28 @@
         <h2 class="modalTitle">Stats</h2>
         <div class="stats">
             <div class="statItem">
-                <p>367</p>
+                <p>{{stats ? stats.played : 0}}</p>
                 <h3>Played</h3>
             </div>
             <div class="statItem">
-                <p>223</p>
+                <p>{{stats ? stats.wins : 0}}</p>
                 <h3>Wins</h3>
             </div>
             <div class="statItem">
-                <p>60%</p>
+                <p>{{stats ? stats.winPerc : 0}}%</p>
                 <h3>Won</h3>
+            </div>
+        </div>
+        <h3 class="subtitle">Guess Distribution</h3>
+        <div class="distGraph">
+            <div class="graphItem" *ngFor="let num of stats?.dist; let i = index">
+                <p>{{i+1}}</p>
+                <div 
+                    [style.width]="'calc('+(max == 0 ? 0 : (num / max!) * 100)+'% - 20px)'" 
+                    [style.border-right]="num == 0 ? 'none' : '1px solid var(--white)'" 
+                    class="graphBar">
+                    <p [style.padding-left]="num == 0 ? '0.5ch' : '0ch'">{{num}}</p>
+                </div>
             </div>
         </div>
     </div>
