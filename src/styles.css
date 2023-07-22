@@ -47,6 +47,7 @@ p{
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.75);
+    z-index: 3;
 }
 
 .modalContent{
@@ -60,7 +61,7 @@ p{
     max-width: 500px;
     border-radius: 8px;
     padding: 1ch;
-    z-index: 1;
+    
 }
 
 .modalTitle{

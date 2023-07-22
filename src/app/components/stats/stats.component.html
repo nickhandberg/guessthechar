@@ -1,5 +1,5 @@
-<div *ngIf="showStats" class="modal">
-    <div class="modalContent">
+<div *ngIf="showStats" class="modal" (click)="closeStats()">
+    <div class="modalContent" (click)="$event.stopPropagation()">
         <button class="closeBtn" (click)="closeStats()"><img src = "../../../assets/close.svg" alt="close modal"/></button>
         <h2 class="modalTitle">Stats</h2>
         <div class="stats">

@@ -1,5 +1,5 @@
-<div *ngIf="showInfo" class="modal">
-    <div class="modalContent">
+<div *ngIf="showInfo" class="modal" (click)="closeInfo()">
+    <div class="modalContent" (click)="$event.stopPropagation()">
         <button class="closeBtn" (click)="closeInfo()"><img src = "../../../assets/close.svg" alt="close modal"/></button>
         <h2 class="modalTitle">Info</h2>
         <p><span style="font-weight: 700;">GuessTheChar</span> is a daily puzzle game inspired by 
