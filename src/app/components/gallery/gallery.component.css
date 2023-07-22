@@ -1,0 +1,101 @@
+img{
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.imageBox{
+    z-index: -1;
+    position: relative;
+    display: flex;
+    max-width: 600px;
+    padding-top: 1ch;
+    padding-bottom: 1ch;
+}
+
+.imageButtons{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    max-width: 400px;
+    justify-content: space-evenly;
+}
+
+.imageButtons button{
+    display: inline-block;
+    font-size: 2ch;
+    font-weight: bold;
+    color: var(--white);
+    padding: 1ch;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.imageButtons button:not(.disabled):hover{
+    color: var(--white2);
+}
+
+.imageButtons .selected{
+    color: var(--white2);
+    border-bottom: 3px solid var(--white2);
+    cursor: default;
+}
+
+.selected{
+    background-color: var(--purple3);
+}
+
+.disabled{
+    cursor: not-allowed;
+    opacity: 0.35;
+}
+
+.disabled:hover{
+    background-color: var(--purple);
+}
+
+#skipButton {
+    display: flex;
+    align-items: center;
+    background-color: var(--red);
+    padding-right: 2ch;
+}
+
+#skipButton:not(.disabled):hover {
+    background-color: var(--red2);
+}
+
+.hint{
+    position: absolute;
+    top: 1;
+    left: 0px;
+    margin-top: 0;
+    padding: 0.5ch 1ch;
+    border-radius: 8px 0px 0px 0px;
+    backdrop-filter: contrast(5%);
+}
+
+.wrong{
+    background-color: var(--red);
+}
+
+.correct{
+    background-color: var(--green);
+}
+
+.selected .correct{
+    background-color: var(--red2);
+}
+
+.wrong .selected{
+    background-color: var(--green2);
+}
+
+
+
+
+
+
+
+
+
+

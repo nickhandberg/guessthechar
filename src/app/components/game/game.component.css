@@ -1,0 +1,29 @@
+main{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.navButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBut {
+    width: 50px;
+}
+
+.navBut button{
+    padding-top: 0.5ch;
+}
+
+
+
+
+
+
+
+
+

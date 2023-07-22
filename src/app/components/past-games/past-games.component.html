@@ -1,1 +1,8 @@
-<p>past-games works!</p>
+<div class="pastGames">
+    <h2>Past Games</h2>
+    <ul>
+        <li *ngFor="let e of [].constructor(size); let i = index">
+            <app-list-item [gameProgress]="userData!.gameProgress[i]" [index]="i"></app-list-item>
+        </li>
+    </ul>
+</div>

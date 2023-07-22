@@ -1,0 +1,45 @@
+nav{
+    margin-top: 2ch;
+    margin-bottom: 2ch;
+    display: flex;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    color: var(--white2);
+    text-decoration: none;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+h1{
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3ch;
+    font-weight: bold;
+}
+
+img:hover {
+    filter:contrast(2);
+}
+
+.iconLinks{
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px;
+}
+
+@media only screen and (max-width: 450px) {
+    h1{
+        font-size: 2.2ch;
+    }
+}

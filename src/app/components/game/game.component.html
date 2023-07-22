@@ -1,1 +1,15 @@
-<p>game works!</p>
+<main>
+    <div class="navButtons">
+        <span class="navBut"><button *ngIf="char?.id !== 0" (click)="navBack()">
+            <img src = "../../../assets/chev-left.svg" alt="help"/>
+        </button></span>
+        <p>Game #{{char?.id! + 1}}</p>
+        <span class="navBut"><button *ngIf="char?.id !== size - 1" (click)="navForward()">
+            <img src = "../../../assets/chev-right.svg" alt="help"/>
+        </button></span>
+    </div>
+    <app-gallery [currentChar]="char"></app-gallery>
+</main>
+
+
+

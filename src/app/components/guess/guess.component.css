@@ -1,0 +1,97 @@
+.winNotif h2{
+    color: var(--green3);
+}
+
+.lossNotif h2{
+    color: var(--red2);
+    
+}
+
+h2{
+    font-size: 4ch;
+    font-weight: 900;
+    margin-top: 1ch;
+    margin-bottom: 0;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2ch;
+}
+
+.charName {
+    font-size: 2.5ch;
+    color: var(--green3);
+    font-weight: 700;
+    
+}
+
+.gameName {
+    color: var(--grey);
+    font-size: 1.5ch;
+}
+
+#guessInput{
+    box-sizing: border-box;
+    margin-top: 1ch;
+    max-width: 600px;
+    width: 100%;
+    font-size: 2ch;
+    padding: 0.75ch;
+    border-radius: 8px;
+    border: none;
+}
+
+#submitBtn{
+    color: var(--white2);
+    font-weight: 600;
+    background-color: var(--green);
+    font-size: 2ch;
+    padding: 0.75ch;
+    margin-top: 1ch;
+    max-width: 600px;
+    width: 100%;
+}
+
+#submitBtn:hover{
+    background-color: var(--green2);
+}
+
+ul{
+    max-width: 600px;
+    padding: 0;
+}
+
+.guessItem{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5ch;
+    margin-bottom: 1ch;
+    border: 3px var(--green3) solid;
+    border-radius: 8px;
+    list-style-type: none;
+    color:var(--white);
+    text-align: left;
+    font-size: 2ch;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wrongAnswer{
+    border-color: var(--red2);
+}
+
+.tryNotif{
+    font-size: 2ch;
+}
+
+.guess{
+    margin-top: 1ch;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+

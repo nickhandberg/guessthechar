@@ -1,1 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --blue: #141328;
+    --green: #058C42;
+    --green2: #06A34D;
+    --green3: #16DB65;
+    --red: #D42240;
+    --red2: #DD2D4A;
+    --purple: #4A4769;
+    --purple2: #7564C0;
+    --purple3: #5F4BB6;
+    --white: #edf2f1;
+    --white2: #ffffff;
+    --grey: #aaadad;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: var(--blue);
+}
+
+button {
+    border: none;
+    background-color: var(--purple);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--purple2);
+}
+
+button:not(.disabled):hover img{
+    filter: contrast(2);
+}
+
+p{
+    color: var(--white2);
+}
+
+.modal{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 3;
+}
+
+.modalContent{
+    border: 1px solid var(--white);
+    background-color: var(--blue);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 85vw;
+    max-width: 500px;
+    border-radius: 8px;
+    padding: 1ch;
+    
+}
+
+.modalTitle{
+    color: var(--white);
+    text-align: center;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.closeBtn{
+    float: right;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.closeBtn:hover{
+    background-color: var(--blue);
+}
+

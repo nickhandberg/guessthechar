@@ -1,1 +1,12 @@
-<p>navbar works!</p>
+<nav>
+    <a routerLink=""><h1>{{icon}}GuessTheChar</h1></a>
+    <div class="iconLinks">
+        <button routerLink="/past-games"><img src = "../../../assets/past-games.svg" alt="past games"/></button>
+        <button (click)="showStatsModal()"><img src = "../../../assets/stats.svg" alt="stats"/></button>
+        <button (click)="showInfoModal()"><img src = "../../../assets/help.svg" alt="info"/></button>
+    </div>
+</nav>
+<app-info [showInfo]="showInfo" (sendShowInfo)="updateShowInfo($event)"></app-info>
+<app-stats [showStats]="showStats" (sendShowStats)="updateShowStats($event)"></app-stats>
+
+
