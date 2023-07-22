@@ -4,6 +4,7 @@ img{
 }
 
 .imageBox{
+    z-index: -1;
     position: relative;
     display: flex;
     max-width: 600px;

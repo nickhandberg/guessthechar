@@ -1,0 +1,25 @@
+.stats{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1ch;
+}
+
+.statItem{
+    display: flex;
+    flex-direction: column; 
+}
+
+h3{
+    text-align: center;
+    margin: 0;
+    color: var(--white);
+    font-weight: 200;
+    font-size: 1.5ch;
+}
+
+p{
+    font-size: 2ch;
+    text-align: center;
+    margin: 0;
+    font-weight: 700;
+}

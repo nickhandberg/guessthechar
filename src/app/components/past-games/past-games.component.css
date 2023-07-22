@@ -4,6 +4,11 @@
     margin-right: auto;
 }
 
+h2{
+    color: var(--white);
+    text-align: center;
+}
+
 ul{
     width: 100%;
     padding: 0;

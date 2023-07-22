@@ -39,3 +39,45 @@ button:not(.disabled):hover img{
 p{
     color: var(--white2);
 }
+
+.modal{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.modalContent{
+    border: 1px solid var(--white);
+    background-color: var(--blue);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 85vw;
+    max-width: 500px;
+    border-radius: 8px;
+    padding: 1ch;
+    z-index: 1;
+}
+
+.modalTitle{
+    color: var(--white);
+    text-align: center;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.closeBtn{
+    float: right;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.closeBtn:hover{
+    background-color: var(--blue);
+}
+

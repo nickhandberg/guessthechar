@@ -1,0 +1,27 @@
+<div *ngIf="showInfo" class="modal">
+    <div class="modalContent">
+        <button class="closeBtn" (click)="closeInfo()"><img src = "../../../assets/close.svg" alt="close modal"/></button>
+        <h2 class="modalTitle">Info</h2>
+        <p><span style="font-weight: 700;">GuessTheChar</span> is a daily puzzle game inspired by 
+            <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>.<br><br>
+            Players have 6 attempts to guess a video game character using the images and hints provided. Each guess reveals another image
+            and hint. Try to guess the character in as few attempts as possible.<br><br>
+
+            New characters are added daily. If you miss some, view the past games list 
+            <img class="inlineImage" src = "../../../assets/past-games.svg" alt="past games"/> to guess them all.<br><br>
+
+            View your stats <img class="inlineImage" src = "../../../assets/stats.svg" alt="stats"/> to show off you video game character knowledge.
+            <br><br>
+
+            If you encounter issues or have any questions please contact me via <a href="mailto:owner@guessthechar.com">email</a>. If you
+            are reporting a bug or broken feature, please provide browser and device information.
+        </p>
+        <p class="copyrightDisclaimer">Notice: Images on this site are believed to be 'fair use' of the copyrighted material as provided for in section
+            107 of the US Copyright Law. In accordance with Title 17 U.S.C. Section 107, the material on this site is distributed without profit.
+            If you wish to use copyrighted material from this site for purposes of your own that go beyond 'fair use', you must obtain permission
+            from the copyright owner. The information on this site does not constitute legal or technical advice. If you are a copyright owner and would
+            like material removed from this site, please contact me via email.
+        </p>
+    </div>
+</div>
+
