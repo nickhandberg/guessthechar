@@ -1,0 +1,28 @@
+a{
+    color: var(--white);
+}
+
+.infoSection{
+    padding-top: 0;
+    padding-left: 1ch;
+    padding-right: 1ch;
+}
+
+.copyrightDisclaimer{
+    font-size: 1ch;
+    font-weight: 100;
+}
+
+.inlineImage{
+    width: 20px;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 450px) {
+    p{
+        font-size: 1.2ch;
+    }
+    .copyrightDisclaimer{
+        font-size: 0.9ch;
+    }
+}

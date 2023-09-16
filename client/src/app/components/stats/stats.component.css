@@ -1,0 +1,59 @@
+.stats{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1ch;
+}
+
+.statItem{
+    display: flex;
+    flex-direction: column; 
+}
+
+h3{
+    text-align: center;
+    margin: 0;
+    color: var(--white);
+    font-weight: 200;
+    font-size: 1.5ch;
+}
+
+.subtitle{
+    margin-top: 2ch;
+    font-weight: 500;
+    font-size: 1.7ch;
+}
+
+p{
+    font-size: 2ch;
+    text-align: center;
+    margin: 0;
+    font-weight: 700;
+}
+
+.distGraph{
+    padding: 1ch;
+}
+
+.graphItem{
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.graphItem p {
+    width: 30px;
+    float: left;
+}
+
+.graphBar{
+    max-width: calc(100% - 40px);
+    border: 1px solid var(--white);
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.graphBar p{
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+}
