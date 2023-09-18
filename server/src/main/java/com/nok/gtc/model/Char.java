@@ -7,15 +7,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Char {
 
     @Id
-    private String id;
+    private String mongoId;
 
+    private final int id;
     private String name;
     private String game;
     private String[] hints;
     private String[] imageLinks;
 
-    public Char(String id, String name, String game, String[] hints, String[] imageLinks){
+    public Char(String mongoId, int id, String name, String game, String[] hints, String[] imageLinks){
         super();
+        this.mongoId = mongoId;
         this.id = id;
         this.name = name;
         this.game = game;
@@ -53,5 +55,9 @@ public class Char {
 
     public void setImageLinks(String[] imageLinks) {
         this.imageLinks = imageLinks;
+    }
+
+    public int getId() {
+        return id;
     }
 }
