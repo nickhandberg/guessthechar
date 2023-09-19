@@ -8,4 +8,6 @@ import java.util.List;
 public interface CharRepository extends MongoRepository<Char, String> {
 
     List<Char> findAll();
+
+    Char findCharById(int id);
 }
